@@ -1,0 +1,33 @@
+.image-mask{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 300px;
+    width: 100%;
+    background: black;
+}
+
+.site-details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.site-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-section .container, .about-us-section .container{
+    border-bottom: 1px solid #ddd;
+}
+.about-us-heading{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.services-logo img{
+    width: 100px;
+}
+
+.go-digital h3{
+    text-align:center;
+}

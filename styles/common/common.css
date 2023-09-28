@@ -1,0 +1,104 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0px;
+font-family: 'segoe ui';
+}
+
+.header-outline{
+    background-color: #4d4d4d;
+}
+.navigation-container {
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navigation-container > .nav-header {
+    display: inline;
+}
+
+.navigation-container > .nav-header > .nav-title {
+display: inline-block;
+font-size: 22px;
+color: #fff;
+padding: 20px 20px;
+}
+
+.navigation-container > .nav-btn {
+display: none;
+}
+
+.navigation-container > .nav-links {
+display: inline;
+float: right;
+font-size: 18px;
+}
+
+.navigation-container > .nav-links > a {
+display: inline-block;
+padding: 13px 25px 13px 25px;
+text-decoration: none;
+color: #efefef;
+}
+
+.navigation-container > .nav-links > a:hover {
+background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-container > #nav-check {
+display: none;
+}
+
+@media (max-width:600px) {
+.navigation-container > .nav-btn {
+    display: block;
+    margin: 0;
+    height: 50px;
+}
+.navigation-container > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+}
+.navigation-container > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.navigation-container > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+}
+.navigation-container > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 80px;
+    left: 0px;
+}
+.navigation-container > .nav-links > a {
+    display: block;
+    width: 100%;
+}
+.navigation-container > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+}
+.navigation-container > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+}
+
+/* End of navigation header */
